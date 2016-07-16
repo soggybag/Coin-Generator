@@ -9,33 +9,59 @@
 import SpriteKit
 
 class GameScene: SKScene {
-    override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!"
-        myLabel.fontSize = 45
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
+    
+    let coinSize = CGSize(width: 16, height: 16)
+    var coinTextures = [SKTexture]()
+    
+    let coinBlock = [[1,1,0,0,0,1,1],
+                     [1,1,1,0,1,1,1],
+                     [1,1,1,1,1,1,1],
+                     [1,1,0,1,0,1,1],
+                     [1,1,0,0,0,1,1]]
+    
+    func makeCoin() -> SKNode {
         
-        self.addChild(myLabel)
+        let coin = SKSpriteNode(color: UIColor.yellowColor(), size: coinSize)
+        
+        let animate = SKAction.animateWithTextures(coinTextures, timePerFrame: 0.2, resize: true, restore: false)
+        let forever = SKAction.repeatActionForever(animate)
+        coin.runAction(forever)
+        
+        return coin
+    }
+    
+    func makeCoinBlock() -> SKNode {
+        let coinNode = SKNode()
+        for row in 0 ..< coinBlock.count {
+            for col in 0 ..< coinBlock[row].count {
+                if coinBlock[row][col] == 1 {
+                    let coin = makeCoin()
+                    coinNode.addChild(coin)
+                    coin.position.x = CGFloat(col) * coinSize.width
+                    coin.position.y = CGFloat(-row) * coinSize.height
+                }
+            }
+        }
+        
+        return coinNode
+    }
+    
+    override func didMoveToView(view: SKView) {
+        for i in 1...5 {
+            coinTextures.append(SKTexture(imageNamed: "Coin_\(i)"))
+        }
+        
+        let block = makeCoinBlock()
+        addChild(block)
+        block.position.x = 100
+        block.position.y = 300
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
        /* Called when a touch begins */
         
         for touch in touches {
-            let location = touch.locationInNode(self)
             
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
         }
     }
    

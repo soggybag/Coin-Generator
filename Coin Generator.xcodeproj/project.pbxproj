@@ -8,24 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		D82311E81D3A833A00B298B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82311E71D3A833A00B298B7 /* AppDelegate.swift */; };
-		D82311EA1D3A833A00B298B7 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D82311E91D3A833A00B298B7 /* GameScene.sks */; };
 		D82311EC1D3A833A00B298B7 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82311EB1D3A833A00B298B7 /* GameScene.swift */; };
 		D82311EE1D3A833A00B298B7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82311ED1D3A833A00B298B7 /* GameViewController.swift */; };
 		D82311F11D3A833A00B298B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82311EF1D3A833A00B298B7 /* Main.storyboard */; };
 		D82311F31D3A833A00B298B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D82311F21D3A833A00B298B7 /* Assets.xcassets */; };
 		D82311F61D3A833A00B298B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D82311F41D3A833A00B298B7 /* LaunchScreen.storyboard */; };
+		D82311FE1D3ACBD300B298B7 /* coin.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D82311FD1D3ACBD300B298B7 /* coin.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D82311E41D3A833A00B298B7 /* Coin Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coin Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D82311E71D3A833A00B298B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D82311E91D3A833A00B298B7 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		D82311EB1D3A833A00B298B7 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		D82311ED1D3A833A00B298B7 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		D82311F01D3A833A00B298B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D82311F21D3A833A00B298B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D82311F51D3A833A00B298B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D82311F71D3A833A00B298B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D82311FD1D3ACBD300B298B7 /* coin.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = coin.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +44,7 @@
 			children = (
 				D82311E61D3A833A00B298B7 /* Coin Generator */,
 				D82311E51D3A833A00B298B7 /* Products */,
+				D82311FD1D3ACBD300B298B7 /* coin.atlas */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,7 +60,6 @@
 			isa = PBXGroup;
 			children = (
 				D82311E71D3A833A00B298B7 /* AppDelegate.swift */,
-				D82311E91D3A833A00B298B7 /* GameScene.sks */,
 				D82311EB1D3A833A00B298B7 /* GameScene.swift */,
 				D82311ED1D3A833A00B298B7 /* GameViewController.swift */,
 				D82311EF1D3A833A00B298B7 /* Main.storyboard */,
@@ -128,9 +128,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D82311EA1D3A833A00B298B7 /* GameScene.sks in Resources */,
 				D82311F61D3A833A00B298B7 /* LaunchScreen.storyboard in Resources */,
 				D82311F31D3A833A00B298B7 /* Assets.xcassets in Resources */,
+				D82311FE1D3ACBD300B298B7 /* coin.atlas in Resources */,
 				D82311F11D3A833A00B298B7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
