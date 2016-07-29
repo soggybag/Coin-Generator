@@ -10,4 +10,4 @@ screen, remember SpriteKit defines the lower left corner as x 0 and y 0!
 
 Coins are animated using SKAction.
 
-![screenshot](screenshot.png)
+![screenshot](screenshot.gif)
